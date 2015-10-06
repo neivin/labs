@@ -1,0 +1,12 @@
+LAB 1
+
+-Use unsigned long long on assignment
+
+-Bit shifting: shift right = divide by 2
+               shift left = mutiply by 2
+
+-adding trues, use bitwise OR
+-removing trues, use bitwise AND
+
+
+
