@@ -1,0 +1,21 @@
+lex temp.l
+yacc -d temp.y
+gcc lex.yy.c y.tab.c -ll -I.
+
+typedef union {
+	int x;
+	char y;
+	float z;
+	char* a;
+} funkyvar;
+
+funkyvar x;
+
+x.x = 4;
+
+x.y = 'a'
+
+
+dont get to store all those data types, but store one of those
+
+declare what data type is what token for the types that you want data from
