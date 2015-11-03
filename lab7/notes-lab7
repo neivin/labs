@@ -1,0 +1,15 @@
+%ignorecase
+
+in definitions section of lex file
+
+sed -E "s/[0-9]+/world/" file77 > file
+
+ps aux
+grep x2 flag
+sed
+
+
+get the process called 777:500pm from ps aux and
+ps aux | grep "777:500pm" | grep -v "grep" | sed -E "s/[0-9]{1,2}:[0-9]{1,2}.m/HELLO/"
+
+regex repeat 1 or 2 times {1,2}   {min,max}
