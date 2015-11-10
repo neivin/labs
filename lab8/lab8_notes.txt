@@ -1,0 +1,79 @@
+Python
+
+- Built on C, can do everything in python that you can do in C
+- Weakly typed language - var is assigned a type when its first used
+- Var is of any type, and as soon as you assign a value, the var gets a type
+
+- All identifiers in python are references.
+- Everything is pass by reference. Special equality tests:
+  > x is y
+  > x == y
+
+- popen calls popen in C. C forks, creates pipes and waits. Read contents of stdout.
+
+uu encode
+- add -xzvf to zip as well
+- tar -cvf compress.tar hello
+
+> want to take input from stdin ( - ) dash
+                            |
+cat compress.tar | uuencode - > payload
+                              |---- redirect output
+
+- ASCII safe binary file
+
+- Extract file using uudecode
+
+$ uudecode -p payload | tar -xvf -
+
+- Useful in installer script
+
+{
+bash code/python code
+
+
+some special characters (###PAYLOAD)
+[stuff to decode]
+
+}
+- grep itself for payload, cut the bottom of file
+- in installer script grep for the special character keywords tail
+- then pipe that into uudecode
+
+- Describe readme buttons and how to use
+- Use append arrow while writing to bashrc, dont overwrite
+  cat x >> .bashrc instead of cat x > bashrc
+
+- wrap exectuable in shell script
+- ask for home dir in script to build absolute path
+
+$ export codemonloc = $(pwd)
+  in script: cd $codemonloc
+          java Codemon
+
+          java -cp codemon
+
+- makefile rule should be a path ./obj/objfile.o: deps
+
+%vpath .c src
+`--- any file .c is inside the src folder
+
+variables-
+  SRC = $(wildcard*.c)
+  INC = $(SRC, prepend Include/)
+
+  how to get all c files in a var
+
+- Establishing precedence in yacc, brackets before mult, befroe add etc.
+
+expr = (expr) | expr2
+
+expr2 = expr * expr | expr3
+.
+.
+.
+expr3 = number;
+
+- yacc is right recursive, so put the last one at the end
+
+- resetting parser, begin0 resets lex, yywrap
