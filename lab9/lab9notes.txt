@@ -1,0 +1,19 @@
+Google: mysql jdbc
+Download Connector/J - http://dev.mysql.com/downloads/connector/j/
+
+ssh into general/linux: ssh mathewn@linux.socs.uoguelph.ca
+
+connect to mysql: mysql -u mathewn -h eon.socs.uoguelph.ca -Dmathewn -pA42750mathewn
+       no space (near -D)
+usr: mathewn
+pw: A42750mathewn
+db: mathewn
+
+
+cmds:
+
+show tables;
+
+classpath for java: (jar is folder of classes)
+  java -cp .:mysql-connector-java-5.1.37-bin.jar <program_name>
+  java -cp .:mysql-connector-java-5.1.37-bin.jar MySQL
