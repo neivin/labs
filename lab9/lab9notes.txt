@@ -17,3 +17,15 @@ show tables;
 classpath for java: (jar is folder of classes)
   java -cp .:mysql-connector-java-5.1.37-bin.jar <program_name>
   java -cp .:mysql-connector-java-5.1.37-bin.jar MySQL
+
+
+create table Trainers ( id VARCHAR(25) PRIMARY KEY, w INT DEFAULT 0, l INT default 0, t INT default 0);
+
+create table Codemon (trainer varchar(25) NOT NULL, name varchar(25), numlines int, code varchar(1000), w int default 0, l int default 0, t int default 0, PRIMARY KEY (trainer, name), FOREIGN KEY (trainer) REFERENCES Trainers(id));
+
+create table Games ( id INT PRIMARY KEY, t1 VARCHAR(25), c1 VARCHAR(25), t2 varchar(25), c2 varchar(25), t3 varchar(25), c3 varchar(25), t4 varchar(25), c4 varchar(25), result varchar(50));
+
+
+MySQL: -e "Create table ...........;"
+
+insert into Test (id, wins) VALUES (2, 1) on duplicate key update wins=wins+5;

@@ -27,9 +27,9 @@ class MySQL{
         stmt = conn.createStatement();
 
         // Use if exists for assignment
-        //stmt.executeUpdate("CREATE TABLE Employees (id INTEGER, first VARCHAR(45), last VARCHAR(45), age INTEGER)");
+        stmt.executeUpdate("CREATE TABLE Employees (id INTEGER, first VARCHAR(45), last VARCHAR(45), age INTEGER)");
 
-        //stmt.executeUpdate("INSERT INTO Employees VALUES (1, 'Jack', 'Dorsey', 49)");
+        stmt.executeUpdate("INSERT INTO Employees VALUES (1, 'Jack', 'Dorsey', 49)");
 
         String sqlq;
         sqlq = "SELECT id, first, last, age FROM Employees";

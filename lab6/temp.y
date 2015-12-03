@@ -34,7 +34,7 @@ command: heat_stmt
 heat_stmt: TOK_HEAT TOK_STATE { printf("Heat turned %s\n", yylval.st); free(yylval.st); }
 	 ;
 
-temp_set: TOK_TARGET TOK_TEMP TOK_NUM  { printf("Temperature was set to %d\n", yylval.temp); }
+temp_set: TOK_TARGET TOK_TEMP TOK_NUM  { printf("Temperature was set to %d\n", $3); }
 	;
 
 err: TOK_ERR { yyerror("Unrecognized token\n"); }

@@ -77,3 +77,7 @@ expr3 = number;
 - yacc is right recursive, so put the last one at the end
 
 - resetting parser, begin0 resets lex, yywrap
+
+
+
+ uuencode t.tar.gz t.tar.gz >> decode_test.sh 
